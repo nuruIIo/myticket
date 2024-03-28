@@ -6,13 +6,13 @@ export declare class AdminController {
     private readonly adminService;
     constructor(adminService: AdminService);
     create(createAdminDto: CreateAdminDto): Promise<{
-        token: string;
+        token: any;
     }>;
-    findAll(): Promise<import("src/admin/models/admin.model").Admin[]>;
-    findOne(id: string): Promise<import("src/admin/models/admin.model").Admin>;
-    update(id: string, updateAdminDto: UpdateAdminDto): Promise<import("src/admin/models/admin.model").Admin>;
-    remove(id: string): Promise<number>;
+    findAll(): any;
+    findOne(id: string): any;
+    update(id: string, updateAdminDto: UpdateAdminDto): Promise<any>;
+    remove(id: string): any;
     signIn(loginDto: LoginDto): Promise<{
-        token: string;
+        token: any;
     }>;
 }

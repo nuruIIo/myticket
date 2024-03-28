@@ -29,7 +29,7 @@ __decorate([
         type: sequelize_typescript_1.DataType.INTEGER,
     }),
     __metadata("design:type", Number)
-], VenuePhoto.prototype, "venueid", void 0);
+], VenuePhoto.prototype, "venueId", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,

@@ -18,12 +18,13 @@ const event_service_1 = require("./event.service");
 const create_event_dto_1 = require("./dto/create-event.dto");
 const update_event_dto_1 = require("./dto/update-event.dto");
 const swagger_1 = require("@nestjs/swagger");
+const platform_express_1 = require("@nestjs/platform-express");
 let EventController = class EventController {
     constructor(eventService) {
         this.eventService = eventService;
     }
-    create(createEventDto) {
-        return this.eventService.create(createEventDto);
+    create(createEventDto, photo) {
+        return this.eventService.create(createEventDto, photo);
     }
     findAll() {
         return this.eventService.findAll();
@@ -42,9 +43,11 @@ exports.EventController = EventController;
 __decorate([
     (0, swagger_1.ApiOperation)({ summary: "Event yaratish" }),
     (0, common_1.Post)(),
+    (0, common_1.UseInterceptors)((0, platform_express_1.FileInterceptor)("photo")),
     __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.UploadedFile)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_event_dto_1.CreateEventDto]),
+    __metadata("design:paramtypes", [create_event_dto_1.CreateEventDto, Object]),
     __metadata("design:returntype", void 0)
 ], EventController.prototype, "create", null);
 __decorate([

@@ -1,5 +1,4 @@
-import { CreateVenueDto } from './create-venue.dto';
-declare const UpdateVenueDto_base: import("@nestjs/mapped-types").MappedType<Partial<CreateVenueDto>>;
+declare const UpdateVenueDto_base: any;
 export declare class UpdateVenueDto extends UpdateVenueDto_base {
     name?: string;
     address?: string;

@@ -4,9 +4,9 @@ import { UpdateVenueDto } from './dto/update-venue.dto';
 export declare class VenueController {
     private readonly venueService;
     constructor(venueService: VenueService);
-    create(createVenueDto: CreateVenueDto): Promise<import("src/venue/entities/venue.entity").Venue[]>;
-    findAll(): Promise<import("src/venue/entities/venue.entity").Venue[]>;
-    findOne(id: string): Promise<import("src/venue/entities/venue.entity").Venue>;
-    update(id: string, updateVenueDto: UpdateVenueDto): Promise<import("src/venue/entities/venue.entity").Venue>;
-    remove(id: string): Promise<number>;
+    create(createVenueDto: CreateVenueDto): Promise<any[]>;
+    findAll(): any;
+    findOne(id: string): any;
+    update(id: string, updateVenueDto: UpdateVenueDto): Promise<any>;
+    remove(id: string): any;
 }

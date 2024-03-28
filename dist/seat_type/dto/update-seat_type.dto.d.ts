@@ -1,5 +1,4 @@
-import { CreateSeatTypeDto } from "./create-seat_type.dto";
-declare const UpdateSeatTypeDto_base: import("@nestjs/mapped-types").MappedType<Partial<CreateSeatTypeDto>>;
+declare const UpdateSeatTypeDto_base: any;
 export declare class UpdateSeatTypeDto extends UpdateSeatTypeDto_base {
     name?: string;
 }

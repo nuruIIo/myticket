@@ -6,7 +6,7 @@ interface IVenuePHotoInter {
 }
 export declare class VenuePhoto extends Model<VenuePhoto, IVenuePHotoInter> {
     id: number;
-    venueid: number;
+    venueId: number;
     url: string;
     venues: Venue;
 }

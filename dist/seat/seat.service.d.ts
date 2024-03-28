@@ -4,9 +4,9 @@ import { Seat } from "./entities/seat.entity";
 export declare class SeatService {
     private seatRepo;
     constructor(seatRepo: typeof Seat);
-    create(createSeatDto: CreateSeatDto): Promise<Seat>;
-    findAll(): Promise<Seat[]>;
-    findOne(id: number): Promise<Seat>;
-    update(id: number, updateSeatDto: UpdateSeatDto): Promise<Seat>;
-    remove(id: number): Promise<number>;
+    create(createSeatDto: CreateSeatDto): any;
+    findAll(): any;
+    findOne(id: number): any;
+    update(id: number, updateSeatDto: UpdateSeatDto): Promise<any>;
+    remove(id: number): any;
 }

@@ -4,9 +4,9 @@ import { Ticket } from "./models/ticket.entity";
 export declare class TicketService {
     private ticketRepo;
     constructor(ticketRepo: typeof Ticket);
-    create(createTicketDto: CreateTicketDto): Promise<Ticket>;
-    findAll(): Promise<Ticket[]>;
-    findOne(id: number): Promise<Ticket>;
-    update(id: number, updateTicketDto: UpdateTicketDto): Promise<Ticket>;
-    remove(id: number): Promise<number>;
+    create(createTicketDto: CreateTicketDto): any;
+    findAll(): any;
+    findOne(id: number): any;
+    update(id: number, updateTicketDto: UpdateTicketDto): Promise<any>;
+    remove(id: number): any;
 }

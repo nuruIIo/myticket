@@ -4,9 +4,9 @@ import { HumanCategory } from "./entities/human_category.entity";
 export declare class HumanCategoryService {
     private humanCategoryRepo;
     constructor(humanCategoryRepo: typeof HumanCategory);
-    create(createHumanCategoryDto: CreateHumanCategoryDto): Promise<HumanCategory>;
-    findAll(): Promise<HumanCategory[]>;
-    findOne(id: number): Promise<HumanCategory>;
-    update(id: number, updateHumanCategoryDto: UpdateHumanCategoryDto): Promise<HumanCategory>;
-    remove(id: number): Promise<number>;
+    create(createHumanCategoryDto: CreateHumanCategoryDto): any;
+    findAll(): any;
+    findOne(id: number): any;
+    update(id: number, updateHumanCategoryDto: UpdateHumanCategoryDto): Promise<any>;
+    remove(id: number): any;
 }

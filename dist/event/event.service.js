@@ -16,12 +16,19 @@ exports.EventService = void 0;
 const common_1 = require("@nestjs/common");
 const sequelize_1 = require("@nestjs/sequelize");
 const event_model_1 = require("./models/event.model");
+const file_service_1 = require("../file/file.service");
 let EventService = class EventService {
-    constructor(eventRepo) {
+    constructor(eventRepo, fileService) {
         this.eventRepo = eventRepo;
+        this.fileService = fileService;
     }
-    create(createEventDto) {
-        return this.eventRepo.create(createEventDto);
+    async create(createEventDto, photo) {
+        const fileName = await this.fileService.saveFile(photo);
+        const post = await this.eventRepo.create({
+            ...createEventDto,
+            photo: fileName,
+        });
+        return post;
     }
     findAll() {
         return this.eventRepo.findAll();
@@ -44,6 +51,6 @@ exports.EventService = EventService;
 exports.EventService = EventService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, sequelize_1.InjectModel)(event_model_1.Event)),
-    __metadata("design:paramtypes", [Object])
+    __metadata("design:paramtypes", [Object, file_service_1.FileService])
 ], EventService);
 //# sourceMappingURL=event.service.js.map

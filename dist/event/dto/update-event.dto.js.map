@@ -1,1 +1,1 @@
-{"version":3,"file":"update-event.dto.js","sourceRoot":"","sources":["../../../src/event/dto/update-event.dto.ts"],"names":[],"mappings":";;;AAAA,6CAA8C;AAC9C,yDAAoD;AAEpD,MAAa,cAAe,SAAQ,IAAA,qBAAW,EAAC,iCAAc,CAAC;CAa9D;AAbD,wCAaC"}
+{"version":3,"file":"update-event.dto.js","sourceRoot":"","sources":["../../../src/event/dto/update-event.dto.ts"],"names":[],"mappings":";;;AAAA,6CAA8C;AAC9C,yDAAoD;AAEpD,MAAa,cAAe,SAAQ,IAAA,qBAAW,EAAC,iCAAc,CAAC;CAY9D;AAZD,wCAYC"}

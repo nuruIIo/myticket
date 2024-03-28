@@ -4,9 +4,9 @@ import { Venue } from "./entities/venue.entity";
 export declare class VenueService {
     private venueRepo;
     constructor(venueRepo: typeof Venue);
-    create(createVenueDto: CreateVenueDto): Promise<Venue[]>;
-    findAll(): Promise<Venue[]>;
-    findOne(id: number): Promise<Venue>;
-    update(id: number, updateVenueDto: UpdateVenueDto): Promise<Venue>;
-    remove(id: number): Promise<number>;
+    create(createVenueDto: CreateVenueDto): Promise<any[]>;
+    findAll(): any;
+    findOne(id: number): any;
+    update(id: number, updateVenueDto: UpdateVenueDto): Promise<any>;
+    remove(id: number): any;
 }

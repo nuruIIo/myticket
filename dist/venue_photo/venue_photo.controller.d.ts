@@ -4,9 +4,9 @@ import { UpdateVenuePhotoDto } from './dto/update-venue_photo.dto';
 export declare class VenuePhotoController {
     private readonly venuePhotoService;
     constructor(venuePhotoService: VenuePhotoService);
-    create(createVenuePhotoDto: CreateVenuePhotoDto): Promise<import("src/venue_photo/entities/venue_photo.entity").VenuePhoto>;
-    findAll(): Promise<import("src/venue_photo/entities/venue_photo.entity").VenuePhoto[]>;
-    findOne(id: string): Promise<import("src/venue_photo/entities/venue_photo.entity").VenuePhoto>;
-    update(id: string, updateVenuePhotoDto: UpdateVenuePhotoDto): Promise<import("src/venue_photo/entities/venue_photo.entity").VenuePhoto>;
-    remove(id: string): Promise<number>;
+    create(createVenuePhotoDto: CreateVenuePhotoDto, url: any): Promise<any>;
+    findAll(): any;
+    findOne(id: string): any;
+    update(id: string, updateVenuePhotoDto: UpdateVenuePhotoDto): Promise<any>;
+    remove(id: string): any;
 }

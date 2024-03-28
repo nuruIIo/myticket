@@ -1,7 +1,5 @@
-import { CreateVenuePhotoDto } from './create-venue_photo.dto';
-declare const UpdateVenuePhotoDto_base: import("@nestjs/mapped-types").MappedType<Partial<CreateVenuePhotoDto>>;
+declare const UpdateVenuePhotoDto_base: any;
 export declare class UpdateVenuePhotoDto extends UpdateVenuePhotoDto_base {
     venueId?: number;
-    url?: string;
 }
 export {};

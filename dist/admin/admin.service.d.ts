@@ -8,17 +8,17 @@ export declare class AdminService {
     private readonly jwtService;
     constructor(adminRepo: typeof Admin, jwtService: JwtService);
     create(createAdminDto: CreateAdminDto): Promise<{
-        token: string;
+        token: any;
     }>;
     generateToken(admin: Admin): Promise<{
-        token: string;
+        token: any;
     }>;
     login(loginDto: LoginDto): Promise<{
-        token: string;
+        token: any;
     }>;
-    findAll(): Promise<Admin[]>;
-    findOne(id: number): Promise<Admin>;
-    update(id: number, updateAdminDto: UpdateAdminDto): Promise<Admin>;
-    remove(id: number): Promise<number>;
-    getAdminByLogin(login: string): Promise<Admin>;
+    findAll(): any;
+    findOne(id: number): any;
+    update(id: number, updateAdminDto: UpdateAdminDto): Promise<any>;
+    remove(id: number): any;
+    getAdminByLogin(login: string): any;
 }

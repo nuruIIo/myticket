@@ -1,5 +1,4 @@
-import { CreateCustomerCardDto } from './create-customer_card.dto';
-declare const UpdateCustomerCardDto_base: import("@nestjs/common").Type<Partial<CreateCustomerCardDto>>;
+declare const UpdateCustomerCardDto_base: any;
 export declare class UpdateCustomerCardDto extends UpdateCustomerCardDto_base {
 }
 export {};

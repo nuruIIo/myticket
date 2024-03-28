@@ -1,8 +1,6 @@
-import { CreateEventDto } from './create-event.dto';
-declare const UpdateEventDto_base: import("@nestjs/common").Type<Partial<CreateEventDto>>;
+declare const UpdateEventDto_base: any;
 export declare class UpdateEventDto extends UpdateEventDto_base {
     name?: string;
-    photo?: string;
     start_date?: string;
     start_time?: string;
     finish_date?: string;

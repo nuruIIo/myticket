@@ -34,6 +34,13 @@ const customer_address_module_1 = require("./customer_address/customer_address.m
 const customer_models_1 = require("./customer/models/customer.models");
 const admin_module_1 = require("./admin/admin.module");
 const admin_model_1 = require("./admin/models/admin.model");
+const booking_module_1 = require("./booking/booking.module");
+const cart_module_1 = require("./cart/cart.module");
+const serve_static_1 = require("@nestjs/serve-static");
+const path_1 = require("path");
+const file_module_1 = require("./file/file.module");
+const booking_model_1 = require("./booking/models/booking.model");
+const cart_model_1 = require("./cart/models/cart.model");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -41,6 +48,9 @@ exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             config_1.ConfigModule.forRoot({ envFilePath: ".env", isGlobal: true }),
+            serve_static_1.ServeStaticModule.forRoot({
+                rootPath: (0, path_1.join)(__dirname, "static"),
+            }),
             sequelize_1.SequelizeModule.forRoot({
                 dialect: "postgres",
                 host: process.env.HOST,
@@ -60,6 +70,8 @@ exports.AppModule = AppModule = __decorate([
                     ticket_entity_1.Ticket,
                     customer_models_1.Customer,
                     admin_model_1.Admin,
+                    booking_model_1.Booking,
+                    cart_model_1.Cart
                 ],
                 autoLoadModels: true,
                 sync: { alter: true },
@@ -78,6 +90,9 @@ exports.AppModule = AppModule = __decorate([
             customer_card_module_1.CustomerCardModule,
             customer_address_module_1.CustomerAddressModule,
             admin_module_1.AdminModule,
+            booking_module_1.BookingModule,
+            cart_module_1.CartModule,
+            file_module_1.FileModule,
         ],
     })
 ], AppModule);

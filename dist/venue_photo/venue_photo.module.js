@@ -12,12 +12,13 @@ const venue_photo_service_1 = require("./venue_photo.service");
 const venue_photo_controller_1 = require("./venue_photo.controller");
 const sequelize_1 = require("@nestjs/sequelize");
 const venue_photo_entity_1 = require("./entities/venue_photo.entity");
+const file_module_1 = require("../file/file.module");
 let VenuePhotoModule = class VenuePhotoModule {
 };
 exports.VenuePhotoModule = VenuePhotoModule;
 exports.VenuePhotoModule = VenuePhotoModule = __decorate([
     (0, common_1.Module)({
-        imports: [sequelize_1.SequelizeModule.forFeature([venue_photo_entity_1.VenuePhoto])],
+        imports: [sequelize_1.SequelizeModule.forFeature([venue_photo_entity_1.VenuePhoto]), file_module_1.FileModule],
         controllers: [venue_photo_controller_1.VenuePhotoController],
         providers: [venue_photo_service_1.VenuePhotoService],
     })

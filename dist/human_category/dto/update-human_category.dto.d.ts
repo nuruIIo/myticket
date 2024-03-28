@@ -1,5 +1,4 @@
-import { CreateHumanCategoryDto } from "./create-human_category.dto";
-declare const UpdateHumanCategoryDto_base: import("@nestjs/mapped-types").MappedType<Partial<CreateHumanCategoryDto>>;
+declare const UpdateHumanCategoryDto_base: any;
 export declare class UpdateHumanCategoryDto extends UpdateHumanCategoryDto_base {
     name?: string;
     startAge?: number;

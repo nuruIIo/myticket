@@ -1,12 +1,14 @@
 import { CreateEventDto } from "./dto/create-event.dto";
 import { UpdateEventDto } from "./dto/update-event.dto";
 import { Event } from "./models/event.model";
+import { FileService } from "../file/file.service";
 export declare class EventService {
     private eventRepo;
-    constructor(eventRepo: typeof Event);
-    create(createEventDto: CreateEventDto): Promise<Event>;
-    findAll(): Promise<Event[]>;
-    findOne(id: number): Promise<Event>;
-    update(id: number, updateEventDto: UpdateEventDto): Promise<Event>;
-    remove(id: number): Promise<number>;
+    private readonly fileService;
+    constructor(eventRepo: typeof Event, fileService: FileService);
+    create(createEventDto: CreateEventDto, photo: any): Promise<any>;
+    findAll(): any;
+    findOne(id: number): any;
+    update(id: number, updateEventDto: UpdateEventDto): Promise<any>;
+    remove(id: number): any;
 }

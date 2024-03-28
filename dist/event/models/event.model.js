@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Event = void 0;
 const sequelize_typescript_1 = require("sequelize-typescript");
 const swagger_1 = require("@nestjs/swagger");
-const class_validator_1 = require("class-validator");
 let Event = class Event extends sequelize_typescript_1.Model {
 };
 exports.Event = Event;
@@ -27,21 +26,12 @@ __decorate([
 ], Event.prototype, "id", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "Event nomi", description: "Event nomi" }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
     __metadata("design:type", String)
 ], Event.prototype, "name", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({
-        example: "http://example.com/photo.jpg",
-        description: "Rasm URL",
-    }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
-    (0, class_validator_1.IsUrl)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
@@ -49,8 +39,6 @@ __decorate([
 ], Event.prototype, "photo", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "2024-03-23", description: "Boshlanish sanasi" }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
@@ -58,8 +46,6 @@ __decorate([
 ], Event.prototype, "start_date", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "12:00", description: "Boshlanish vaqti" }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
@@ -67,8 +53,6 @@ __decorate([
 ], Event.prototype, "start_time", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "2024-03-24", description: "Tugash sanasi" }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
@@ -76,8 +60,6 @@ __decorate([
 ], Event.prototype, "finish_date", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "18:00", description: "Tugash vaqti" }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
@@ -85,7 +67,6 @@ __decorate([
 ], Event.prototype, "finish_time", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "Ma'lumotlar", description: "Tafsilotlar" }),
-    (0, class_validator_1.IsString)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
@@ -93,7 +74,6 @@ __decorate([
 ], Event.prototype, "info", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: 1, description: "Event turi ID raqami" }),
-    (0, class_validator_1.IsNumber)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.INTEGER,
     }),
@@ -101,7 +81,6 @@ __decorate([
 ], Event.prototype, "event_type_id", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: 1, description: "Insonlar kategoriyasi ID raqami" }),
-    (0, class_validator_1.IsNumber)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.INTEGER,
     }),
@@ -109,7 +88,6 @@ __decorate([
 ], Event.prototype, "human_category_id", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: 1, description: "Maqom ID raqami" }),
-    (0, class_validator_1.IsNumber)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.INTEGER,
     }),
@@ -117,7 +95,6 @@ __decorate([
 ], Event.prototype, "venue_id", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: 1, description: "Til ID raqami" }),
-    (0, class_validator_1.IsNumber)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.INTEGER,
     }),
@@ -125,8 +102,6 @@ __decorate([
 ], Event.prototype, "lang_id", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ example: "2024-03-22", description: "E'lon qilingan sana" }),
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsNotEmpty)(),
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
     }),
